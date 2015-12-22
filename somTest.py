@@ -18,6 +18,6 @@ input = numpy.array(
           [.66, .66, .66]])
 somCol = 3
 somRow = 3
-som = som(input,12,somCol,somRow)
+som = som(input,12,4,somCol,somRow)
 ans =som.trainmodel()
 print 'trained model is',ans
