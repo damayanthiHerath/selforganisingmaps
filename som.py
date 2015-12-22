@@ -2,11 +2,12 @@ import numpy as numpy
 import math as math
 from random import randint
 class som:
-    def __init__(self, input,maxIterations=10,somCol=3, somRow=3):
+    def __init__(self, input,maxIterations=10,sigmaInitial = 4,somCol=3, somRow=3):
 		self.somCol = somCol
 		self.somRow = somRow
                 self.input  = input
                 self.maxIterations = maxIterations;
+                self.sigmaInitial = sigmaInitial
     
  
     def trainmodel(self):
@@ -24,7 +25,7 @@ class som:
         maxIterations = self.maxIterations
 
         # Initial effective width
-        sigmaInitial = 5
+        sigmaInitial = self.sigmaInitial
 
         # Time constant for sigma
         t1 = maxIterations / numpy.log(sigmaInitial)
