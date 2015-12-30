@@ -47,3 +47,10 @@ input = np.array(
 
 gsomOb = gsom(input,0.3,100)
 trainedGSOM = gsomOb.trainNetwork()
+print 'Iterating over the final gsom'
+for position,neuro in trainedGSOM.iteritems():
+    print 'The weights vector of neuron at ',position.getXposition(),',',position.getYposition()
+    print "\n"
+    print neuro.getweightVector()
+    print 'The accumulated error of the neuron \n'
+    print neuro.getAccumulatedError()
