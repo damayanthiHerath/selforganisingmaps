@@ -16,8 +16,11 @@ input = numpy.array(
           [.33, .33, .33],
           [.5, .5, .5],
           [.66, .66, .66]])
+
 somCol = 3
 somRow = 3
-som = som(input,12,4,somCol,somRow)
-ans =som.trainmodel()
+radius = 2
+
+som = som(input,12,4,somCol,somRow,2)
+ans = som.trainmodel()
 print 'trained model is',ans
